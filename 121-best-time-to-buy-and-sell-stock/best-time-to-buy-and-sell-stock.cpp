@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        int minPrice = INT_MAX;
+        int minPrice = numeric_limits<int>::max();
         int maxProfit = 0;
         
         for (int price : prices)
@@ -12,7 +12,7 @@ public:
             }
             else
             {
-                maxProfit = max(maxProfit, price - minPrice);
+                 maxProfit = max(maxProfit, price - minPrice);
             }
         }
         
